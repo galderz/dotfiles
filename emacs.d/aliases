@@ -1,0 +1,3 @@
+# Emacs aliases #
+alias ec='/Applications/Emacs.app/Contents/MacOS/Emacs'
+alias et='emacs'

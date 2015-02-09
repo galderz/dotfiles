@@ -1,0 +1,7 @@
+[user]
+	name = Galder Zamarreño
+	email = galder@zamarreno.com
+[merge]
+	mergeoptions = --ff-only
+#[core]
+#        editor = et

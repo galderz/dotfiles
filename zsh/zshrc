@@ -1,0 +1,45 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+#
+# Aliases
+#
+
+# General aliases
+alias 0='cd ~/0'
+alias l='ls -lha'
+alias c='clear'
+alias untar='tar -xzvpf'
+
+# Emacs aliases
+source ~/.dotfiles/emacs.d/aliases
+
+# Git aliases
+source ~/.dotfiles/git/aliases
+
+# Maven aliases
+source ~/.dotfiles/maven/aliases
+
+# Project aliases
+alias infinispan="source ~/.dotfiles/includes/infinispan.sh"
+alias jdg="source ~/.dotfiles/includes/jdg.sh"
+
+#
+# Functions
+#
+
+# Find any file
+function fnd {
+  find . -iname "*${1}*" 
+}

@@ -1,0 +1,6 @@
+#
+# Git aliases
+#
+
+alias gcx='git cherry-pick --abort'
+alias giaa='git add --all'
