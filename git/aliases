@@ -2,5 +2,20 @@
 # Git aliases
 #
 
+# Branch (b)
+alias gbr='~/.dotfiles/git/git-topic-branch-remove'
+
+# Commit (c)
 alias gcx='git cherry-pick --abort'
+
+# Index (i)
 alias giaa='git add --all'
+
+# Pull request (pr)
+alias gprh='~/.dotfiles/git/git-pull-request-handle'
+
+# Update (u)
+alias gu='~/.dotfiles/git/git-update'
+
+# Sync (y)
+alias gyu='~/.dotfiles/git/git-sync-upstream'
