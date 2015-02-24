@@ -6,8 +6,8 @@
 alias mc='mvn clean'
 
 # Build (b)  
-alias mb='mvn -Dmaven.test.skip.exec=true install'
-alias mcb='mvn -Dmaven.test.skip.exec=true clean install'
+alias mb='mvn -DskipTests=true install'
+alias mcb='mvn -DskipTests=true clean install'
 
 # Test (t)
 alias mt='mvn test'
