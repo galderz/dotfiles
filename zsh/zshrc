@@ -32,6 +32,7 @@ source ~/.dotfiles/git/aliases
 source ~/.dotfiles/maven/aliases
 
 # Project aliases
+alias hibernate="source ~/.dotfiles/includes/hibernate.sh"
 alias infinispan="source ~/.dotfiles/includes/infinispan.sh"
 alias jdg="source ~/.dotfiles/includes/jdg.sh"
 
