@@ -2,11 +2,9 @@
 # Git aliases
 #
 
-# Branch (b)
-alias gbr='~/.dotfiles/git/git-topic-branch-remove'
-
 # Commit (c)
 alias gcx='git cherry-pick --abort'
+alias gcm='git commit --all --message'
 
 # Index (i)
 alias giaa='git add --all'
@@ -17,6 +15,9 @@ alias gprh='~/.dotfiles/git/git-pull-request-handle'
 # Push (p)
 alias gpo='git push origin'
 alias gpom='git push origin master'
+
+# Topic Banch (tb)
+alias gtbX='~/.dotfiles/git/git-branch-remove-list'
 
 # Update (u)
 alias gu='~/.dotfiles/git/git-update'
