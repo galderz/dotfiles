@@ -16,3 +16,4 @@ alias Gi='./gradlew idea'
 
 # Test (t)
 alias Gt='./gradlew test -xfindbugsMain -xfindbugsTest'
+alias Gtp='./gradlew test -xfindbugsMain -xfindbugsTest --project-dir'
