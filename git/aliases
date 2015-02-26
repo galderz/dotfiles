@@ -20,7 +20,7 @@ alias gpo='git push origin'
 alias gpom='git push origin master'
 
 # Topic Branch (t)
-alias gtX='~/.dotfiles/git/git-branch-remove-list'
+alias gtX='~/.dotfiles/git/git-topic-branch-remove'
 alias gtu='~/.dotfiles/git/git-sync-upstream'
 
 # Working Copy (w)
