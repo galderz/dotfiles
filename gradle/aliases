@@ -1,0 +1,18 @@
+#
+# Gradle aliases
+#
+
+# Build (b)  
+alias Gb='./gradlew build -xtest -xfindbugsMain -xfindbugsTest'
+
+# Clean (c)
+alias Gc='./gradlew clean'
+alias Gcb='./gradlew clean build -xtest -xfindbugsMain -xfindbugsTest'
+alias Gci='./gradlew cleanIdea idea'
+alias Gct='./gradlew clean test -xfindbugsMain -xfindbugsTest'
+
+# IntelliJ (i)
+alias Gi='./gradlew idea'
+
+# Test (t)
+alias Gt='./gradlew test -xfindbugsMain -xfindbugsTest'
