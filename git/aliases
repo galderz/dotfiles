@@ -10,7 +10,7 @@ alias gcx='git cherry-pick --abort'
 alias gcm='git commit --all --message'
 
 # Index (i)
-alias giaa='git add --all'
+alias gia='git add --all'
 
 # Pull request (pr)
 alias gprh='~/.dotfiles/git/git-pull-request-handle'
