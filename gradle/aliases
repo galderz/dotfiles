@@ -10,6 +10,7 @@ alias Gc='./gradlew clean'
 alias Gcb='./gradlew clean build -xtest -xfindbugsMain -xfindbugsTest'
 alias Gci='./gradlew cleanIdea idea'
 alias Gct='./gradlew clean test -xfindbugsMain -xfindbugsTest'
+alias Gctp='./gradlew clean test -xfindbugsMain -xfindbugsTest --project-dir'
 
 # IntelliJ (i)
 alias Gi='./gradlew idea'
