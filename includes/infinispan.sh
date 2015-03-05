@@ -1,5 +1,5 @@
 source ~/.dotfiles/maven/settings.sh
-source ~/.dotfiles/java/java7.sh
+source ~/.dotfiles/java/java8.sh
 # source ~/bin/git-completion
 # source ~/bin/aliases
 
