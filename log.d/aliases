@@ -1,0 +1,2 @@
+# Emacs aliases #
+alias el='/Applications/Emacs.app/Contents/MacOS/Emacs -q -l ~/.log.d/init.el'

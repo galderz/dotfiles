@@ -24,6 +24,7 @@ alias untar='tar -xzvpf'
 
 # Emacs aliases
 source ~/.dotfiles/emacs.d/aliases
+source ~/.dotfiles/log.d/aliases
 
 # Git aliases
 source ~/.dotfiles/git/aliases
