@@ -8,7 +8,9 @@ alias mc='mvn clean'
 # Build (b)  
 alias mb='mvn -DskipTests=true install'
 alias mcb='mvn -DskipTests=true clean install'
+alias mcbp='mvn -DskipTests=true clean install --projects'
 
 # Test (t)
 alias mt='mvn test'
 alias mct='mvn clean test'
+alias mctp='mvn clean test --projects'
