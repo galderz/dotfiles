@@ -37,9 +37,12 @@
 ;;  '(height . 40)) ; Height set to 60 lines
 ;;  default-frame-alist))
 
-(setq initial-frame-alist
-      `((left . 0) (top . 0)
-        (width . 237) (height . 65)))
+;; Start with maximized windows
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+;; (setq initial-frame-alist
+;;      `((left . 0) (top . 0)
+;;        (width . 237) (height . 65)))
 
 (setq inhibit-startup-message   t)   ; Don't want any startup message
 (setq make-backup-files         nil) ; Don't want any backup files
