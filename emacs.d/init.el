@@ -1,5 +1,8 @@
 ;; init.el
 
+;; Enable numbered columns by default
+(setq column-number-mode t)
+
 ;; save/restore opened files and windows config
 (desktop-save-mode 1) ; 0 for off
 

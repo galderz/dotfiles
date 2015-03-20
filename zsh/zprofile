@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='emacs'
-export VISUAL='emacs'
+export EDITOR='emacs -q -l ~/.emacs.d/basic-init.el'
+export VISUAL='emacs -q -l ~/.emacs.d/basic-init.el'
 export PAGER='less'
 
 #
