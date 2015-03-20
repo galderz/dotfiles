@@ -37,6 +37,9 @@ alias hibernate="source ~/.dotfiles/includes/hibernate.sh"
 alias infinispan="source ~/.dotfiles/includes/infinispan.sh"
 alias jdg="source ~/.dotfiles/includes/jdg.sh"
 
+# Java aliases
+alias dump-threads="~/.dotfiles/java/dump-threads.sh"
+
 #
 # Functions
 #

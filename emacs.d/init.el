@@ -1,5 +1,8 @@
 ;; init.el
 
+;; save/restore opened files and windows config
+(desktop-save-mode 1) ; 0 for off
+
 ;; Prevent the creation of backup and autosave files
 (setq make-backup-files nil)
 (setq auto-save-default nil)
@@ -9,6 +12,12 @@
 
 ;; Prevent creation of unwanted buffers
 (load "~/.emacs.d/unwanted-buffers")
+
+;; Add repositories
+(require 'package)
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
 
 ;; Load 'wombat' theme only in terminal mode
 (defun on-after-init ()
@@ -42,3 +51,5 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
+;; Haskell customizations
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
