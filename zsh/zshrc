@@ -39,6 +39,7 @@ alias jdg="source ~/.dotfiles/includes/jdg.sh"
 
 # Java aliases
 alias dump-threads="~/.dotfiles/java/dump-threads.sh"
+alias untilfail="~/.dotfiles/java/untilfail.sh"
 
 #
 # Functions
