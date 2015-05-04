@@ -3,18 +3,18 @@
 #
 
 # Build (b)  
-alias Gb='./gradlew build -xtest -xfindbugsMain -xfindbugsTest'
+alias Gb='./gradlew build install -xtest'
 
 # Clean (c)
 alias Gc='./gradlew clean'
-alias Gcb='./gradlew clean build -xtest -xfindbugsMain -xfindbugsTest'
+alias Gcb='./gradlew clean build install -xtest'
 alias Gci='./gradlew cleanIdea idea'
-alias Gct='./gradlew clean test -xfindbugsMain -xfindbugsTest'
-alias Gctp='./gradlew clean test -xfindbugsMain -xfindbugsTest --project-dir'
+alias Gct='./gradlew clean test'
+alias Gctp='./gradlew clean test --project-dir'
 
 # IntelliJ (i)
 alias Gi='./gradlew idea'
 
 # Test (t)
-alias Gt='./gradlew test -xfindbugsMain -xfindbugsTest'
-alias Gtp='./gradlew test -xfindbugsMain -xfindbugsTest --project-dir'
+alias Gt='./gradlew test'
+alias Gtp='./gradlew test --project-dir'

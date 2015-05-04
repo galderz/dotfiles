@@ -21,6 +21,7 @@ alias 0='cd ~/0'
 alias l='ls -lha'
 alias c='clear'
 alias untar='tar -xzvpf'
+alias mktar='tar -czvpf'
 
 # Emacs aliases
 source ~/.dotfiles/emacs.d/aliases
