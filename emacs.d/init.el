@@ -81,24 +81,63 @@
 ;; Haskell customizations
 (load "~/.emacs.d/haskell")
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("e80932ca56b0f109f8545576531d3fc79487ca35a9a9693b62bf30d6d08c9aaf" default)))
- '(haskell-process-auto-import-loaded-modules t)
- '(haskell-process-log t)
- '(haskell-process-suggest-remove-import-lines t)
- '(haskell-process-type (quote cabal-repl))
- '(haskell-tags-on-save t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;; Load private file
+(load-file "~/.private.el")
+
+;;;;;;;;;;;;;;;
+;; Circe IRC ;;
+;;;;;;;;;;;;;;;
+
+;; Networks and channels
+(setq circe-network-options
+  `(("Freenode"
+     :nick "galderz"
+     :channels ("#infinispan" "#vertx" "#wildfly" "#hibernate-dev" "#jboss-dev" "#emacs-circe" 
+		"#haskell-beginners","#netty")
+     :nickserv-password ,freenode-password
+    )
+    ("Redhat"
+     :host "irc-2.devel.redhat.com"
+     :nick "galderz"
+     :channels ("#jdg" "#jboss-support" "#haskell" "#emacs" "#neuchatel")
+    )))
+
+;; Ignore buffer activity unless mentioned
+(setq tracking-ignored-buffers '(("^#" circe-highlight-nick-face)))
+
+;; Enable chat logging
+(load "lui-logging" nil t)
+(enable-lui-logging-globally)
+
+;; Strip mIRC Color Codes
+(eval-after-load 'circe
+  '(defun lui-irc-propertize (&rest args)))
+
+;; Quick connect IRC command
+(defun irc ()
+  "Connect to IRC"
+  (interactive)
+  (circe "Freenode")
+  (circe "Redhat"))
+
+;;(custom-set-variables
+;; ;; custom-set-variables was added by Custom.
+;; ;; If you edit it by hand, you could mess it up, so be careful.
+;; ;; Your init file should contain only one such instance.
+;; ;; If there is more than one, they won't work right.
+;; '(custom-safe-themes
+;;   (quote
+;;    ("e80932ca56b0f109f8545576531d3fc79487ca35a9a9693b62bf30d6d08c9aaf" default)))
+;; '(haskell-process-auto-import-loaded-modules t)
+;; '(haskell-process-log t)
+;; '(haskell-process-suggest-remove-import-lines t)
+;; '(haskell-process-type (quote cabal-repl))
+;; '(haskell-tags-on-save t))
+;;(custom-set-faces
+;; ;; custom-set-faces was added by Custom.
+;; ;; If you edit it by hand, you could mess it up, so be careful.
+;; ;; Your init file should contain only one such instance.
+;; ;; If there is more than one, they won't work right.
+;; )
 
 (load-theme 'zenburn t)

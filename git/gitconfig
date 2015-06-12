@@ -4,4 +4,4 @@
 [merge]
 	mergeoptions = --ff-only
 #[core]
-#        editor = et
+#        editor = vi 
