@@ -24,8 +24,12 @@ alias untar='tar -xzvpf'
 alias mktar='tar -czvpf'
 
 # Emacs aliases
-source ~/.dotfiles/emacs.d/aliases
-source ~/.dotfiles/log.d/aliases
+alias e='emacsclient -t'
+alias et='emacsclient -t'
+alias ec='emacsclient -c'
+alias vim='emacsclient -t'
+alias vi='emacsclient -t'
+alias el='emacs -q -l ~/.log.d/init.el'
 
 # Git aliases
 source ~/.dotfiles/git/aliases
@@ -48,5 +52,5 @@ alias untilfail="~/.dotfiles/java/untilfail.sh"
 
 # Find any file
 function fnd {
-  find . -iname "*${1}*" 
+  find . -iname "*${1}*"
 }

@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='emacs -q -l ~/.emacs.d/basic-init.el'
-export VISUAL='emacs -q -l ~/.emacs.d/basic-init.el'
+export EDITOR='emacsclient -t'
+export VISUAL='emacsclient -t'
 export PAGER='less'
 export TERM=xterm-256color
 

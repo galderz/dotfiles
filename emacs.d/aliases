@@ -1,5 +1,0 @@
-# Emacs aliases #
-alias ec='/Applications/Emacs.app/Contents/MacOS/Emacs'
-alias et='emacs'
-alias eb='emacs -q -l ~/.emacs.d/basic-init.el'
-
