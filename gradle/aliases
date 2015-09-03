@@ -8,6 +8,7 @@ alias Gb='./gradlew build install -xtest'
 # Clean (c)
 alias Gc='./gradlew clean'
 alias Gcb='./gradlew clean build install -xtest'
+alias Gcbp='./gradlew clean build -xtest --project-dir'
 alias Gci='./gradlew cleanIdea idea'
 alias Gct='./gradlew clean test'
 alias Gctp='./gradlew clean test --project-dir'

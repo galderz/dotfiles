@@ -29,7 +29,7 @@ alias et='emacsclient -t'
 alias ec='emacsclient -c'
 alias vim='emacsclient -t'
 alias vi='emacsclient -t'
-alias el='emacs -q -l ~/.log.d/init.el'
+alias el='/Applications/Emacs.app/Contents/MacOS/Emacs -q -l ~/.log.d/init.el'
 
 # Git aliases
 source ~/.dotfiles/git/aliases
@@ -54,3 +54,5 @@ alias untilfail="~/.dotfiles/java/untilfail.sh"
 function fnd {
   find . -iname "*${1}*"
 }
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
