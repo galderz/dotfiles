@@ -1,11 +1,11 @@
 source ~/.dotfiles/gradle/aliases
-source ~/.dotfiles/java/java7.sh
+source ~/.dotfiles/java/java8.sh
 
 #
 # Gradle aliases specific to Hibernate
 #
 
-# Build (b)  
+# Build (b)
 alias Gb='./gradlew build -xtest -xfindbugsMain -xfindbugsTest'
 
 # Clean (c)
@@ -19,4 +19,3 @@ alias Gtp='./gradlew test -xfindbugsMain -xfindbugsTest --project-dir'
 
 pushd ~/0/hibernate/orm.git
 git status
-
