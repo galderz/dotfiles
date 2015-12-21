@@ -7,9 +7,8 @@ brew install maven
 brew install git
 brew install wget
 brew install highlight
-brew install nvm
 brew install unrar
-brew install magit
+brew install homebrew/emacs/magit
 
 brew cask install iterm2
 brew cask install caskroom/versions/java7
