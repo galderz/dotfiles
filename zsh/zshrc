@@ -54,4 +54,3 @@ alias untilfail="~/.dotfiles/java/untilfail.sh"
 function fnd {
   find . -iname "*${1}*"
 }
-
