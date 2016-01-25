@@ -9,6 +9,7 @@ brew install wget
 brew install highlight
 brew install unrar
 brew install homebrew/emacs/magit
+brew install haskell-stack
 
 brew cask install iterm2
 brew cask install caskroom/versions/java7
@@ -23,3 +24,4 @@ brew cask install google-chrome
 brew cask install firefox
 brew cask install istat-menus
 brew cask install vlc
+brew cask install xld
