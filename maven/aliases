@@ -12,7 +12,7 @@ alias mcb='mvn -DskipTests=true clean install'
 alias mcbp='mvn -DskipTests=true clean install --projects'
 
 # Test (t)
-alias mt='mvn test'
-alias mtp='mvn test --projects'
-alias mct='mvn clean test'
-alias mctp='mvn clean test --projects'
+alias mt='mvn install'
+alias mtp='mvn install --projects'
+alias mct='mvn clean install'
+alias mctp='mvn clean install --projects'

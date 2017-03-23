@@ -5,6 +5,9 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+# Add Haskell executables
+export PATH="$HOME/.local/bin:$PATH"
+
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
@@ -16,3 +19,9 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # Load NVM
 export NVM_DIR="/Users/g/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# Add elm-format to PATH
+export PATH="$PATH:/opt/elm-format"
+
+# Add kubectl & minikube to PATH
+export PATH="$PATH:/opt/minikube:/opt/kubectl"

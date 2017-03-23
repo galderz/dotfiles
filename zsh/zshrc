@@ -30,6 +30,7 @@ alias ec='emacsclient -c'
 alias vim='emacsclient -t'
 alias vi='emacsclient -t'
 alias el='/Applications/Emacs.app/Contents/MacOS/Emacs -q -l ~/.log.d/init.el'
+alias er='emacsclient -e "(kill-emacs)" && emacs --daemon && emacsclient -c &'
 
 # Git aliases
 source ~/.dotfiles/git/aliases
@@ -45,6 +46,9 @@ alias jdg="source ~/.dotfiles/includes/jdg.sh"
 # Java aliases
 alias dump-threads="~/.dotfiles/java/dump-threads.sh"
 alias untilfail="~/.dotfiles/java/untilfail.sh"
+
+# JBoss aliases
+alias jboss-kill="pkill -9 -f \".*/java .* org.jboss.as.standalone .*\" && pkill -9 -f \".*/java .* org.jboss.as.process-controller .*\""
 
 #
 # Functions

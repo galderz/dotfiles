@@ -1,5 +1,5 @@
 source ~/.dotfiles/maven/settings.sh
-source ~/.dotfiles/java/java7.sh
+source ~/.dotfiles/java/java8.sh
 
 #
 # Maven aliases specific to JDG
@@ -15,11 +15,10 @@ alias mcb='./build.sh -Dmaven.test.skip.exec=true clean install'
 alias mcbp='./build.sh -DskipTests=true clean install --projects'
 
 # Test (t)
-alias mt='./build.sh test'
-alias mtp='./build.sh test --projects'
-alias mct='./build.sh clean test'
-alias mctp='./build.sh clean test --projects'
+alias mt='./build.sh install'
+alias mtp='./build.sh install --projects'
+alias mct='./build.sh clean install'
+alias mctp='./build.sh clean install --projects'
 
-pushd ~/0/infinispan/jdg.git
+pushd ~/0/infinispan/jdg/git
 git status
-
