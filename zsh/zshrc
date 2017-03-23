@@ -48,7 +48,8 @@ alias dump-threads="~/.dotfiles/java/dump-threads.sh"
 alias untilfail="~/.dotfiles/java/untilfail.sh"
 
 # JBoss aliases
-alias jboss-kill="pkill -9 -f \".*/java .* org.jboss.as.standalone .*\" && pkill -9 -f \".*/java .* org.jboss.as.process-controller .*\""
+alias jboss-kill='pkill -9 -f ".*/java .* org.jboss.as.standalone .*" \
+  || pkill -9 -f ".*/java .* org.jboss.as.process-controller .*"'
 
 #
 # Functions
