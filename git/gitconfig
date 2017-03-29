@@ -3,5 +3,3 @@
 	email = galder@zamarreno.com
 [merge]
 	mergeoptions = --ff-only
-#[core]
-#        editor = vi 
