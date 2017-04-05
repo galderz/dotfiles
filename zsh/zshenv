@@ -25,3 +25,6 @@ export PATH="$PATH:/opt/elm-format"
 
 # Add kubectl & minikube to PATH
 export PATH="$PATH:/opt/minikube:/opt/kubectl"
+
+# Add oc & minishift to PATH
+export PATH="$PATH:/opt/openshift-client:/opt/minishift"
