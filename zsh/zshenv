@@ -24,7 +24,10 @@ export NVM_DIR="/Users/g/.nvm"
 export PATH="$PATH:/opt/elm-format"
 
 # Add kubectl & minikube to PATH
-export PATH="$PATH:/opt/minikube:/opt/kubectl"
+export PATH="$PATH:/opt/minikube"
+export PATH="$PATH:/opt/kubectl"
 
-# Add oc & minishift to PATH
-export PATH="$PATH:/opt/openshift-client:/opt/minishift"
+# Add oc, minishift & fabric8 to PATH
+export PATH="$PATH:/opt/openshift-client"
+export PATH="$PATH:/opt/minishift"
+export PATH="$PATH:/opt/gofabric8"
