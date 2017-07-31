@@ -10,6 +10,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
+# Set computer name (as done via System Preferences → Sharing)
+sudo scutil --set ComputerName "m15"
+sudo scutil --set HostName "m15"
+sudo scutil --set LocalHostName "m15"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "m15"
+
 # Set "Use all F1, F2 as standard keys"
 defaults write -g com.apple.keyboard.fnState -bool true
 
