@@ -25,3 +25,4 @@ brew cask install firefox
 brew cask install istat-menus
 brew cask install vlc
 brew cask install xld
+brew cask install gas-mask
