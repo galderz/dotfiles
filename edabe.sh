@@ -1,7 +1,5 @@
 #!/bin/sh
 
-brew install --with-cocoa --srgb emacs
-brew linkapps emacs
 brew cask install java
 brew install maven
 brew install git
@@ -10,6 +8,11 @@ brew install highlight
 brew install unrar
 brew install homebrew/emacs/magit
 brew install haskell-stack
+
+# Please try the Cask for a better-supported Cocoa version:
+#  brew cask install emacs
+brew cask install emacs
+brew services start emacs
 
 brew cask install iterm2
 brew cask install caskroom/versions/java7
