@@ -4,7 +4,7 @@ brew cask install java
 brew install maven
 brew install git
 brew install wget
-brew install highlight
+# brew install highlight
 brew install unrar
 brew install haskell-stack
 
@@ -15,10 +15,10 @@ brew install homebrew/emacs/magit
 brew services start emacs
 
 brew cask install iterm2
-brew cask install caskroom/versions/java7
+# brew cask install caskroom/versions/java7
 brew cask install intellij-idea
 brew cask install skype
-brew cask install notational-velocity
+# brew cask install notational-velocity
 brew cask install dropbox
 brew cask install 1password
 brew cask install alfred
