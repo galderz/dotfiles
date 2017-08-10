@@ -6,12 +6,12 @@ brew install git
 brew install wget
 brew install highlight
 brew install unrar
-brew install homebrew/emacs/magit
 brew install haskell-stack
 
 # Please try the Cask for a better-supported Cocoa version:
 #  brew cask install emacs
 brew cask install emacs
+brew install homebrew/emacs/magit
 brew services start emacs
 
 brew cask install iterm2
