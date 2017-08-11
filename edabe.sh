@@ -30,3 +30,4 @@ brew cask install vlc
 brew cask install xld
 brew cask install gas-mask
 brew cask install tunnelblick
+brew cask install brave
