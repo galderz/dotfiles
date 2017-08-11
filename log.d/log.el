@@ -10,6 +10,10 @@
 (setq user-emacs-directory "~/.log.d/")
 
 
+;; Set command as meta
+(setq mac-command-modifier 'meta)
+
+
 ;; Simpler y/n answers
 (fset 'yes-or-no-p 'y-or-n-p)
 
