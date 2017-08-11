@@ -60,4 +60,8 @@
 (setq auto-save-default nil)
 
 
+;; Turn off wrapping of lines
+(set-default 'truncate-lines t)
+
+
 ;;; log.el ends here
