@@ -52,6 +52,11 @@ alias untilfail="~/.dotfiles/java/untilfail.sh"
 alias jboss-kill='pkill -9 -f ".*/java .* org.jboss.as.standalone .*" \
   || pkill -9 -f ".*/java .* org.jboss.as.process-controller .*"'
 
+
+# Cloud aliases
+alias openshift="source ~/.dotfiles/openshift/openshift.sh"
+
+
 #
 # Functions
 #
