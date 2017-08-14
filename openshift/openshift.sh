@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
+source ~/.dotfiles/kubernetes/kubernetes.sh
+
 
 export OPENSHIFT_CLIENT_HOME="/opt/openshift-client"
-export KUBETAIL_HOME="/opt/kubetail"
-export PATH=$OPENSHIFT_CLIENT_HOME:$KUBETAIL_HOME:$PATH
+export PATH=$OPENSHIFT_CLIENT_HOME:$PATH
 
 
-oc version
-
-KUBETAIL_VERSION=$(printf "kubetail v%s" "$(kubetail --version)")
-echo $KUBETAIL_VERSION
+OC_VERSION=`oc version`
+OC_VERSION=$(printf "\nOpenShift: \n%s", "$OC_VERSION")
+echo $OC_VERSION
