@@ -8,11 +8,12 @@ brew install wget
 brew install unrar
 brew install haskell-stack
 
-# Please try the Cask for a better-supported Cocoa version:
-#  brew cask install emacs
-brew cask install emacs
+# Ignore the warning saying to install the cask version
+# because it does not work as well in terms of window
+# management
+brew install --with-cocoa emacs
 brew install homebrew/emacs/magit
-brew services start emacs
+
 
 brew cask install iterm2
 # brew cask install caskroom/versions/java7
