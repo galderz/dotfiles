@@ -57,8 +57,8 @@ alias jboss-kill='pkill -9 -f ".*/java .* org.jboss.as.standalone .*" \
 alias openshift="source ~/.dotfiles/openshift/openshift.sh"
 
 
-# Load NVM
-source ~/.zsh-nvm/zsh-nvm.plugin.zsh
+# External aliases
+alias nodejs="source ~/.dotfiles/node.js/nodejs.sh"
 
 
 #
