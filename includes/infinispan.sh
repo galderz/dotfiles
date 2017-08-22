@@ -6,5 +6,5 @@ source ~/.dotfiles/maven/aliases
 
 # export MAVEN_OPTS="$MAVEN_OPTS -Dlog4j.configuration=file:/opt/infinispan-log4j.xml"
 
-pushd ~/0/infinispan/git
+pushd ~/1/infinispan
 git status
