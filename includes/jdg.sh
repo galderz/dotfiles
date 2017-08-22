@@ -20,5 +20,5 @@ alias mtp='./build.sh install --projects'
 alias mct='./build.sh clean install'
 alias mctp='./build.sh clean install --projects'
 
-pushd ~/0/infinispan/jdg/git
+pushd ~/1/jdg
 git status
