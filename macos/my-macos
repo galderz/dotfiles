@@ -24,3 +24,8 @@ defaults write com.apple.dock orientation right
 
 # Make the caps lock key act as control
 osascript ./macos/capslock-to-control.scpt
+
+
+# When using Command key as Meta key on Emacs GUI version, Command-Ctrl-d (C-M-d)
+# shortcut does not work unless the system wide OSX shortcut has been disabled
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
