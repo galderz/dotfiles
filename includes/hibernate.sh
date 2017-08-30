@@ -17,5 +17,5 @@ alias Gctp='./gradlew clean test -xfindbugsMain -xfindbugsTest --project-dir'
 alias Gt='./gradlew test -xfindbugsMain -xfindbugsTest'
 alias Gtp='./gradlew test -xfindbugsMain -xfindbugsTest --project-dir'
 
-pushd ~/0/hibernate/orm.git
+pushd ~/1/hibernate-orm
 git status
