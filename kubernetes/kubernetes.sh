@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 
-export KUBECTL_HOME="/opt/kubectl"
 export KUBETAIL_HOME="/opt/kubetail"
 export PATH=$KUBECTL_HOME:$KUBETAIL_HOME:$PATH
 
