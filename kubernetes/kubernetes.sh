@@ -4,6 +4,7 @@
 export KUBETAIL_HOME="/opt/kubetail"
 export PATH=$KUBECTL_HOME:$KUBETAIL_HOME:$PATH
 
+echo `docker --version`
 
 KUBECTL_VERSION=`kubectl version --short=true --client=true`
 KUBECTL_VERSION=$(printf "kubectl %s" "$KUBECTL_VERSION")
