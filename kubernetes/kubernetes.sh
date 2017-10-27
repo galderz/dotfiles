@@ -3,7 +3,8 @@
 
 export KUBETAIL_HOME="/opt/kubetail"
 export KOMPOSE_HOME="/opt/kompose"
-export PATH=$KUBECTL_HOME:$KUBETAIL_HOME:$KOMPOSE_HOME:$PATH
+export PACKER_HOME="/opt/packer"
+export PATH=$KUBECTL_HOME:$KUBETAIL_HOME:$KOMPOSE_HOME:$PACKER_HOME:$PATH
 
 echo `docker --version`
 
@@ -17,3 +18,6 @@ echo $KUBETAIL_VERSION
 
 KOMPOSE_VERSION=$(printf "kompose v%s" "$(kompose version)")
 echo $KOMPOSE_VERSION
+
+PACKER_VERSION=$(printf "packer v%s" "$(packer --version)")
+echo $PACKER_VERSION
