@@ -56,6 +56,7 @@ alias jboss-kill='pkill -9 -f ".*/java .* org.jboss.as.standalone .*" \
 # Cloud aliases
 alias oc34="source ~/.dotfiles/openshift/openshift-3.4.sh"
 alias oc36="source ~/.dotfiles/openshift/openshift-3.6.sh"
+alias google-cloud="source ~/.dotfiles/google/google-cloud.sh"
 
 
 # External aliases
