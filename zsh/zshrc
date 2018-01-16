@@ -59,6 +59,7 @@ alias oc36="source ~/.dotfiles/openshift/openshift-3.6.sh"
 alias oc37="source ~/.dotfiles/openshift/openshift-3.7.sh"
 alias google-cloud="source ~/.dotfiles/google/google-cloud.sh"
 alias ms="source ~/.dotfiles/openshift/minishift.sh"
+alias mk="source ~/.dotfiles/kubernetes/minikube.sh"
 
 
 # External aliases
