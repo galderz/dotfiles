@@ -29,3 +29,5 @@ oc delete template --all
 
 oc delete serviceaccounts --all
 oc delete rolebindings --all
+
+oc delete statefulsets --all
