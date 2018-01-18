@@ -27,3 +27,5 @@ oc delete routes --all
 
 oc delete template --all
 
+oc delete serviceaccounts --all
+oc delete rolebindings --all
