@@ -74,3 +74,22 @@ alias nodejs="source ~/.dotfiles/node.js/nodejs.sh"
 function fnd {
   find . -iname "*${1}*"
 }
+
+# Docker::Listen
+function listen {
+  socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
+}
+
+function geary {
+  docker run \
+    -e DISPLAY=docker.for.mac.host.internal:0 \
+    jess/geary
+}
+
+# Docker::Slack
+function slack {
+  docker run \
+    -v /dev/shm:/dev/shm \
+    -e DISPLAY=docker.for.mac.host.internal:0 \
+     jess/slack
+}
