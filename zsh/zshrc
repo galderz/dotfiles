@@ -84,15 +84,15 @@ function listen {
 function geary {
   # -e DISPLAY=docker.for.mac.host.internal:0 \
   docker run \
-    -e DISPLAY=$(ifconfig en5 | grep 'inet '|awk '{print $2}'):0 \
-    jess/geary
+         -e DISPLAY=docker.for.mac.localhost:0 \
+         jess/geary
 }
 
 # Docker::Slack
 function slack {
   # -e DISPLAY=docker.for.mac.host.internal:0 \
   docker run \
-    -v /dev/shm:/dev/shm \
-    -e DISPLAY=$(ifconfig en5 | grep 'inet '|awk '{print $2}'):0 \
-     jess/slack
+         -v /dev/shm:/dev/shm \
+         -e DISPLAY=docker.for.mac.localhost:0 \
+         jess/slack
 }
