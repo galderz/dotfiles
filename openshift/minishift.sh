@@ -11,3 +11,4 @@ echo $MINISHIFT_VERSION
 
 
 eval $(minishift oc-env)
+eval $(minishift docker-env)
