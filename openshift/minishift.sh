@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-export MINISHIFT_HOME="/Users/g/opt/minishift"
+export MINISHIFT_HOME="/opt/minishift"
 export PATH=$MINISHIFT_HOME:$PATH
 
 

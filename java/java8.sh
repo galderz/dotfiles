@@ -6,4 +6,3 @@ export JAVA_ROOT=$JAVA_HOME
 export PATH=$JAVA_BINDIR:$PATH
 
 java -version
-
