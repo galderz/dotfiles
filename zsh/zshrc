@@ -43,12 +43,17 @@ source ~/.dotfiles/maven/aliases
 alias hibernate="source ~/.dotfiles/includes/hibernate.sh"
 alias infinispan="source ~/.dotfiles/includes/infinispan.sh"
 alias jdg="source ~/.dotfiles/includes/jdg.sh"
+alias quarkus="source ~/.dotfiles/includes/quarkus.sh"
+alias operator="source ~/.dotfiles/includes/operator.sh"
+alias operator-aws="source ~/.dotfiles/includes/operator-aws.sh"
+alias olm="source ~/.dotfiles/includes/olm.sh"
 
 # Java aliases
 alias dump-threads="~/.dotfiles/java/dump-threads.sh"
 alias untilfail="~/.dotfiles/java/untilfail.sh"
-alias j8="source ~/.dotfiles/java/java8.sh"
-alias graal="source ~/.dotfiles/java/graal.sh"
+#alias j8="source ~/.dotfiles/java/java8.sh"
+#alias graal="source ~/.dotfiles/java/graal.sh"
+#alias graal-ee="source ~/.dotfiles/java/graal-ee.sh"
 
 # JBoss aliases
 alias jboss-kill='pkill -9 -f ".*/java .* org.jboss.as.standalone .*" \
@@ -62,10 +67,12 @@ alias oc37="source ~/.dotfiles/openshift/openshift-3.7.sh"
 alias oc39="source ~/.dotfiles/openshift/openshift-3.9.sh"
 alias oc310="source ~/.dotfiles/openshift/openshift-3.10.sh"
 alias oc311="source ~/.dotfiles/openshift/openshift-3.11.sh"
+alias oc40="source ~/.dotfiles/openshift/openshift-4.0.sh"
 alias google-cloud="source ~/.dotfiles/google/google-cloud.sh"
 alias ms="source ~/.dotfiles/openshift/minishift.sh"
 alias mk="source ~/.dotfiles/kubernetes/minikube.sh"
 alias openwhisk="source ~/.dotfiles/openwhisk/openwhisk.sh"
+#alias dmachine="source ~/.dotfiles/docker/docker-machine.sh"
 
 # External aliases
 alias nodejs="source ~/.dotfiles/node.js/nodejs.sh"
@@ -101,9 +108,8 @@ function slack {
          jess/slack
 }
 
-# Execute nvm by default
+# Add node to path by default (for React Native)
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-# Add Node by default
-nvm use 8.11
+nvm use 10.15

@@ -1,9 +1,7 @@
-source ~/.dotfiles/java/java8.sh
+#!/usr/bin/env bash
+
 
 export GRAALVM_HOME="/opt/graalvm/Contents/Home"
 
-export MVN_HOME="/opt/maven"
-export MVN_BINDIR=$MVN_HOME"/bin"
-export PATH=$MVN_BINDIR:$PATH
 
-mvn -v
+$GRAALVM_HOME/bin/native-image --version

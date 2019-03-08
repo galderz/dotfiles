@@ -1,5 +1,8 @@
+#!/usr/bin/env bash
+
+
 source ~/.dotfiles/maven/settings.sh
-source ~/.dotfiles/java/java8.sh
+source ~/.dotfiles/java/java11.sh
 source ~/.dotfiles/maven/aliases
 # source ~/bin/git-completion
 # source ~/bin/aliases
