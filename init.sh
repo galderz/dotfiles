@@ -11,7 +11,6 @@ dotfiles() {
 
 
 ansible() {
-  xcode-select --install
   sudo easy_install pip
   sudo pip install "ansible"
 }
