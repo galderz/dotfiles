@@ -2,7 +2,7 @@
 
 
 # Set kubeconfig for aws
-export KUBECONFIG=/Users/g/0/openshift/aws/auth/kubeconfig
+export KUBECONFIG=/Users/g/0/openshift/aws/latest/auth/kubeconfig
 
 
 # Bring in oc client library
