@@ -12,7 +12,7 @@ dotfiles:
 opt:
 	sudo mkdir /opt
 	cd /opt
-	sudo chown "$(whoami)" .
+	sudo chown g .
 
 
 ansible:
@@ -58,7 +58,7 @@ macos:
 # - Ignore the warning saying to install the cask version,
 #   because it does not work as well in terms of window management install
 brew:
-	sudo chown -R "$(whoami)" /usr/local/lib/pkgconfig
+	sudo chown -R g /usr/local/lib/pkgconfig
 	brew install --with-cocoa emacs
 	brew install homebrew/emacs/magit
 
