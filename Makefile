@@ -12,7 +12,7 @@ dotfiles:
 opt:
 	sudo mkdir /opt
 	cd /opt
-	sudo chown $(whoami) .
+	sudo chown "$(whoami)" .
 
 
 ansible:
