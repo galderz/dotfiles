@@ -3,6 +3,8 @@
 .DEFAULT_GOAL := help
 
 
+## Automated targets
+
 sudoers:
 	init/sudoers.sh
 
@@ -24,10 +26,12 @@ brew:
 git-remotes:
 	init/git-remotes.sh
 
+all: sudoers opt emacs symlinks brew macos git-remotes
+
+
+## Manual targets
+
 virtualbox:
 	init/virtualbox.sh
-
-
-all: sudoers opt emacs symlinks brew macos git-remotes
 
 manual: virtualbox
