@@ -17,16 +17,24 @@ emacs:
 symlinks:
 	init/symlinks.sh
 
-macos:
-	init/macos.sh
-
 brew:
 	init/brew.sh
+
+shell:
+	init/shell.sh
+
+brew-cask:
+	init/brew-cask.sh
+
+macos:
+	init/macos.sh
 
 git-remotes:
 	init/git-remotes.sh
 
-all: sudoers opt emacs symlinks brew macos git-remotes
+all: sudoers opt emacs symlinks brew shell brew-cask macos git-remotes
+
+fast: sudoers opt emacs symlinks brew shell macos git-remotes
 
 
 ## Manual targets
