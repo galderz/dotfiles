@@ -12,6 +12,5 @@ brew install nvm
 brew install unrar
 brew install wget
 
-brew tap daviderestivo/emacs-head
-brew install emacs-head --with-cocoa
-brew install homebrew/emacs/magit
+brew tap d12frosted/emacs-plus
+brew install emacs-plus --HEAD --with-natural-title-bars

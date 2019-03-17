@@ -3,4 +3,9 @@
 set -e -x
 
 cd ~
-git clone https://github.com/galderz/prelude .emacs.d
+
+# based on spacemacs
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+# based on bbatsov's prelude
+# git clone https://github.com/galderz/prelude .emacs.d
