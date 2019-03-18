@@ -13,4 +13,4 @@ brew install unrar
 brew install wget
 
 brew tap d12frosted/emacs-plus
-brew install emacs-plus --HEAD --with-natural-title-bars
+brew install emacs-plus
