@@ -6,7 +6,7 @@ brew tap caskroom/cask
 
 brew cask install 1password
 brew cask install alfred
-brew cask install brave
+brew cask install brave-browser
 brew cask install docker
 brew cask install dropbox
 brew cask install firefox
