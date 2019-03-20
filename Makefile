@@ -29,12 +29,15 @@ brew-cask:
 macos:
 	init/macos.sh
 
+iterm2:
+	init/iterm2.sh
+
 git-remotes:
 	init/git-remotes.sh
 
-all: sudoers opt emacs symlinks brew shell brew-cask macos git-remotes
+all: sudoers opt emacs symlinks brew shell brew-cask macos iterm2 git-remotes
 
-fast: sudoers opt emacs symlinks brew shell macos git-remotes
+fast: sudoers opt emacs symlinks brew shell macos iterm2 git-remotes
 
 
 ## Manual targets
