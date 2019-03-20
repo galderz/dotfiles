@@ -4,6 +4,9 @@ set -e -x
 
 BACKUP=/Volumes/Backup/Backup
 
+# Make backup dir
+mkdir ${BACKUP} || true
+
 # Private files
 cp -r ~/0 ${BACKUP}
 
