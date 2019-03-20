@@ -4,8 +4,9 @@ set -e -x
 
 BACKUP=/Volumes/Backup/Backup
 
-# Make backup dir
-mkdir ${BACKUP} || true
+# Remake backup dir
+rm -drf ${BACKUP}
+mkdir ${BACKUP}
 
 # Private files
 cp -r ~/0 ${BACKUP}
@@ -24,10 +25,11 @@ cp ~/.private.el ${BACKUP}
 cp ~/.pypirc ${BACKUP}
 
 # GPG
-cp ~/.gnupg ${BACKUP}
+# Avoid errors related to copying sockets
+cp -r ~/.gnupg ${BACKUP} || true
 
 # Documents
-cp ~/Documents ${BACKUP}
+cp -r ~/Documents ${BACKUP}
 
 # Dropbox data
-cp ~/Dropbox ${BACKUP}
+cp -r ~/Dropbox ${BACKUP}
