@@ -1,4 +1,4 @@
-.PHONY: dep emacs build image push run clean help
+.PHONY: dep emacs build image push run clean ssh help
 
 .DEFAULT_GOAL := help
 
@@ -48,10 +48,20 @@ virtualbox:
 caps:
 	macos/capslock-to-control.sh
 
-backup:
-	init/backup.sh
+# TODO make it non-manual (requires restore)
+fonts:
+	init/fonts.sh
 
+# TODO make it non-manual (requires restore)
+ssh:
+	init/ssh.sh
+
+# TODO make it non-manual
 restore:
 	init/restore.sh
 
-manual: virtualbox caps
+
+## Host targets
+
+backup:
+	init/backup.sh
