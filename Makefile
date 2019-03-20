@@ -1,4 +1,4 @@
-.PHONY: dep build image push run clean help
+.PHONY: dep emacs build image push run clean help
 
 .DEFAULT_GOAL := help
 
@@ -42,4 +42,7 @@ fast: sudoers opt emacs symlinks brew shell macos git-remotes
 virtualbox:
 	init/virtualbox.sh
 
-manual: virtualbox
+caps:
+	macos/capslock-to-control.sh
+
+manual: virtualbox caps
