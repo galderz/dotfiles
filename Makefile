@@ -1,4 +1,4 @@
-.PHONY: dep emacs build image push run clean ssh help
+.PHONY: dep emacs build image iterm2 push run clean ssh help
 
 .DEFAULT_GOAL := help
 
