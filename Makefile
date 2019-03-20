@@ -45,4 +45,10 @@ virtualbox:
 caps:
 	macos/capslock-to-control.sh
 
+backup:
+	init/backup.sh
+
+restore:
+	init/restore.sh
+
 manual: virtualbox caps
