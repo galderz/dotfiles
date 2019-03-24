@@ -51,6 +51,7 @@ alias olm="source ~/.dotfiles/includes/olm.sh"
 # Java aliases
 alias dump-threads="~/.dotfiles/java/dump-threads.sh"
 alias untilfail="~/.dotfiles/java/untilfail.sh"
+alias j12="source ~/.dotfiles/java/java12.sh"
 #alias j8="source ~/.dotfiles/java/java8.sh"
 #alias graal="source ~/.dotfiles/java/graal.sh"
 #alias graal-ee="source ~/.dotfiles/java/graal-ee.sh"
