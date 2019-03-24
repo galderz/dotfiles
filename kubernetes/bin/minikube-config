@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e -x
+
+PROFILE=${1-default}
+
+minikube profile ${PROFILE}
+minikube config set memory 2048
+minikube config set cpus 2
+minikube config set disk-size 10GB
+minikube config set vm-driver virtualbox

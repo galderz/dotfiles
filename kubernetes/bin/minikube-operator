@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -e -x
+
+cd ~/1/go/src/github.com/operator-framework/operator-lifecycle-manager
+oc create -f deploy/upstream/manifests/latest/
+
