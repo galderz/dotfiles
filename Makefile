@@ -60,8 +60,14 @@ ssh:
 restore:
 	init/restore.sh
 
+restore-repos:
+	init/restore-repos.sh
+
 
 ## Host targets
 
 backup:
 	init/backup.sh
+
+backup-repos:
+	init/backup-repos.sh
