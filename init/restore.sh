@@ -4,4 +4,5 @@ set -e -x
 
 BACKUP=/Volumes/Backup/Backup
 
-cp -r $BACKUP/. ~/
+cp -r ${BACKUP}/. ~/
+

@@ -2,7 +2,7 @@
 
 
 #source ~/.dotfiles/java/java8.sh
-source ~/.dotfiles/java/graal.sh
+source ~/.dotfiles/java/graalvm.sh
 
 
 source ~/.dotfiles/maven/settings.sh

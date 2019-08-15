@@ -16,6 +16,7 @@ brew cask install intellij-idea
 brew cask install istat-menus
 brew cask install iterm2
 brew cask install skype
+brew cask install spotify
 brew cask install tunnelblick
 brew cask install vlc
 brew cask install xld

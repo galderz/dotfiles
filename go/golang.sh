@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-export GOHOME="/opt/go-1.11"
+export GOHOME="/opt/go"
 #export DEPHOME="/opt/dep-0.5.0-33-g14bef7d1"
 export GOPATH=$HOME/1/go
 

@@ -6,4 +6,4 @@ set -e -x
 # New security restrictions make it hard to automate:
 # https://stackoverflow.com/questions/32907909/allow-applescript-script-to-run-without-asking-for-permission
 # http://technicalgig.com/how-dropbox-hacks-your-mac/
-osascript ./capslock-to-control.scpt
+osascript ./macos/capslock-to-control.scpt
