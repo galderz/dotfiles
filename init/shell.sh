@@ -1,7 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 set -e -x
 
-echo "/usr/local/bin/bash" | sudo tee -a /etc/shells
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-sudo chsh -s /usr/local/bin/bash g
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
