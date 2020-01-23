@@ -2,85 +2,82 @@
 
 .DEFAULT_GOAL := help
 
-
-## Automated targets
-
 sudoers:
 	echo "g          ALL = (ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
 
 opt:
-	sudo mkdir /opt
 	pushd /opt; \
 	sudo chown "$(whoami)" .; \
 	popd
 
 emacs:
-	git clone https://github.com/syl20bnr/spacemacs .emacs.d
+	git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 symlinks:
-	ln -s ~/1/dotfiles .dotfiles
-	ln -s ~/.dotfiles/git/gitconfig .gitconfig
-	ln -s ~/.dotfiles/log.d .log.d
+	ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
+	ln -s ~/.dotfiles/log.d ~/.log.d
+
+install-brew:
+	echo | /usr/bin/ruby -e `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)`
+	brew tap d12frosted/emacs-plus
 
 brew:
-	echo | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	brew install git
-	brew install gpg
-	brew install haskell-stack
-	brew install unrar
-	brew install wget
-	brew tap d12frosted/emacs-plus
-	brew install emacs-plus
+	brew install \
+		git \
+		gpg \
+		haskell-stack \
+		unrar \
+		wget \
+		python-yq \
+		ninja \
+		emacs-plus
 
 shell:
 	init/shell.sh
 
 brew-cask:
-	brew tap caskroom/cask
-	brew cask install 1password
-	brew cask install alfred
-	brew cask install brave-browser
-	brew cask install docker
-	brew cask install dropbox
-	brew cask install firefox
-	brew cask install google-chrome
-	brew cask install intellij-idea
-	brew cask install istat-menus
-	brew cask install iterm2
-	brew cask install skype
-	brew cask install spotify
-	brew cask install tunnelblick
-	brew cask install vlc
-	brew cask install xld
+	brew cask install \
+		1password \
+		alfred \
+		autoconf \
+		brave-browser \
+		docker \
+		dropbox \
+		firefox \
+		google-chrome \
+		intellij-idea \
+		istat-menus \
+		iterm2 \
+		skype \
+		spotify \
+		tunnelblick \
+		vlc \
+		xld
 
 macos:
-	pushd ~/.dotfiles/macos ;\
+	pushd ~/.dotfiles/macos; \
 	./mathias-macos; \
 	./my-macos; \
 	popd
 
-iterm2:
-	mkdir -p "~/Library/Application Support/iTerm2/DynamicProfiles"
-	cp ~/.dotfiles/iterm2/my-profile.json "~/Library/Application Support/iTerm2/DynamicProfiles"
-
 git-remotes:
-	pushd ~/1/dotfiles; \
+	pushd ~/.dotfiles; \
 	git remote rm origin; \
 	git remote add origin git@github.com:galderz/dotfiles.git; \
 	popd
 
-all: sudoers opt emacs symlinks brew shell brew-cask macos iterm2 git-remotes
+fast: sudoers opt emacs symlinks install-brew brew shell git-remotes macos
 
-fast: sudoers opt emacs symlinks brew shell macos iterm2 git-remotes
-
+all: fast brew-cask
 
 ## Manual targets
 
+sdkman:
+	curl -s "https://get.sdkman.io" | bash
+	source "$$HOME/.sdkman/bin/sdkman-init.sh"
+
 virtualbox:
 	init/virtualbox.sh
-
-caps:
-	macos/capslock-to-control.sh
 
 # TODO make it non-manual (requires restore)
 fonts:
@@ -93,6 +90,20 @@ ssh:
 # TODO make it non-manual
 restore:
 	init/restore.sh
+
+# TODO make it non-manual
+restore-from-time-machine:
+	pushd /Volumes/M19TM/Backups.backupdb/m19/Latest/Macintosh\ HD/Users/g; \
+	cp -r 0 ~/; \
+	mkdir ~/.m2; \
+	cp .m2/settings ~/.m2; \
+	cp -r .ssh ~/; \
+	cp -r .ssh.redhat ~/; \
+	cp .private.el ~/; \
+	cp .pypirc ~/; \
+	cp -r .gnupg ~/ || true; \
+  cp -r Documents ~/; \
+  cp -r Dropbox ~/;
 
 restore-repos:
 	init/restore-repos.sh

@@ -1,16 +1,12 @@
 #
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
+# Editors
 #
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+export EDITOR='emacsclient'
+export VISUAL='emacsclient'
+export PAGER='less'
+export TERM=xterm-256color
 
-# Customize to your needs...
 
 #
 # Aliases
@@ -22,6 +18,7 @@ alias l='ls -lha'
 alias c='clear'
 alias untar='tar -xzvpf'
 alias mktar='tar -czvpf'
+alias gnubin='source ~/.dotfiles/gnubin.sh'
 
 # Emacs aliases
 alias e='emacsclient -t'
@@ -41,43 +38,46 @@ source ~/.dotfiles/maven/aliases
 
 # Project aliases
 alias hibernate="source ~/.dotfiles/includes/hibernate.sh"
+alias graalvm="source ~/.dotfiles/includes/graalvm.sh"
 alias infinispan="source ~/.dotfiles/includes/infinispan.sh"
 alias jdg="source ~/.dotfiles/includes/jdg.sh"
-alias quarkus="source ~/.dotfiles/includes/quarkus.sh"
+alias jgroups="source ~/.dotfiles/includes/jgroups.sh"
+alias quarkus8="source ~/.dotfiles/includes/quarkus8.sh"
+alias quarkus11="source ~/.dotfiles/includes/quarkus11.sh"
 alias operator="source ~/.dotfiles/includes/operator.sh"
+alias operator-minikube="source ~/.dotfiles/includes/operator-minikube.sh"
 alias operator-aws="source ~/.dotfiles/includes/operator-aws.sh"
 alias olm="source ~/.dotfiles/includes/olm.sh"
+alias graal11-dev="source ~/.dotfiles/includes/graal11-dev.sh"
 
 # Java aliases
 alias dump-threads="~/.dotfiles/java/dump-threads.sh"
 alias untilfail="~/.dotfiles/java/untilfail.sh"
 alias j12="source ~/.dotfiles/java/java12.sh"
-#alias j8="source ~/.dotfiles/java/java8.sh"
-#alias graal="source ~/.dotfiles/java/graal.sh"
-#alias graal-ee="source ~/.dotfiles/java/graal-ee.sh"
-
-# JBoss aliases
 alias jboss-kill='pkill -9 -f ".*/java .* org.jboss.as.standalone .*" \
   || pkill -9 -f ".*/java .* org.jboss.as.process-controller .*"'
-
+alias ps-rss="ps ax -o pid,rss,command | numfmt --header --from-unit=1024 --to=iec --field 2 | grep -v grep"
+#alias graalvm-dev="source ~/.dotfiles/java/graalvm-dev.sh"
 
 # Cloud aliases
-alias oc34="source ~/.dotfiles/openshift/openshift-3.4.sh"
-alias oc36="source ~/.dotfiles/openshift/openshift-3.6.sh"
-alias oc37="source ~/.dotfiles/openshift/openshift-3.7.sh"
-alias oc39="source ~/.dotfiles/openshift/openshift-3.9.sh"
 alias oc310="source ~/.dotfiles/openshift/openshift-3.10.sh"
 alias oc311="source ~/.dotfiles/openshift/openshift-3.11.sh"
 alias oc40="source ~/.dotfiles/openshift/openshift-4.0.sh"
+alias oc41="source ~/.dotfiles/openshift/openshift-4.1.sh"
 alias google-cloud="source ~/.dotfiles/google/google-cloud.sh"
 alias ms="source ~/.dotfiles/openshift/minishift.sh"
 alias mk="source ~/.dotfiles/kubernetes/minikube.sh"
 alias openwhisk="source ~/.dotfiles/openwhisk/openwhisk.sh"
+alias update-minikube="~/.dotfiles/kubernetes/update-minikube.sh"
 #alias dmachine="source ~/.dotfiles/docker/docker-machine.sh"
 
 # External aliases
 alias nodejs="source ~/.dotfiles/node.js/nodejs.sh"
 alias golang="source ~/.dotfiles/go/golang.sh"
+
+# Presentation aliases
+alias putcachejpa="source ~/.dotfiles/includes/putcachejpa.sh"
+
 
 #
 # Functions
@@ -85,32 +85,40 @@ alias golang="source ~/.dotfiles/go/golang.sh"
 
 # Find any file
 function fnd {
-  find . -iname "*${1}*"
-}
-
-# Docker::Listen
-function listen {
-  socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
-}
-
-function geary {
-  # -e DISPLAY=docker.for.mac.host.internal:0 \
-  docker run \
-         -e DISPLAY=docker.for.mac.localhost:0 \
-         jess/geary
-}
-
-# Docker::Slack
-function slack {
-  # -e DISPLAY=docker.for.mac.host.internal:0 \
-  docker run \
-         -v /dev/shm:/dev/shm \
-         -e DISPLAY=docker.for.mac.localhost:0 \
-         jess/slack
+    find . -iname "*${1}*"
 }
 
 # Add node to path by default (for React Native)
-export NVM_DIR=~/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# export NVM_DIR=~/.nvm
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# nvm use 10.15 --silent
 
-nvm use 10.15
+
+#
+# Better defaults
+#
+
+SENSIBLE_BASH=${HOME}/0/bash/sensible/sensible.bash
+
+if [ -f ${SENSIBLE_BASH} ]; then
+     source ${SENSIBLE_BASH}
+fi
+
+# As close to autocomplete on zsh
+#bind 'set show-all-if-ambiguous on'
+#bind 'TAB:menu-complete'
+
+
+#
+# Prompt
+#
+
+if [ -t 1 ]
+then
+    PROMPT=~/0/bash/polyglot/polyglot.sh
+
+    if [ -f ${PROMPT} ]; then
+        source ${PROMPT}
+    fi
+fi

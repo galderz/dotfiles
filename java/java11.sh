@@ -1,4 +1,4 @@
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
+export JAVA_HOME="/opt/java-11"
 export JRE_HOME=$JAVA_HOME"/jre"
 export JAVA_BINDIR=$JAVA_HOME"/bin"
 export JDK_HOME=$JAVA_HOME
