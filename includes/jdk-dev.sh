@@ -1,4 +1,5 @@
 source ~/.dotfiles/java/java13.sh
+source ~/.dotfiles/ant/ant.sh
 
 pushd ~/1/jdkjdk
 git status

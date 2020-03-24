@@ -25,6 +25,7 @@ alias gtu='~/.dotfiles/git/git-sync-upstream'
 
 # Working Copy (w)
 alias gwU='git checkout -f;git reset --hard HEAD;git clean -f -d'
+alias gwA='git clean -dfx'
 
 
 #

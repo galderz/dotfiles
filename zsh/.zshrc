@@ -42,21 +42,22 @@ source ~/.dotfiles/maven/aliases
 
 # Project aliases
 alias hibernate="source ~/.dotfiles/includes/hibernate.sh"
-alias graalvm="source ~/.dotfiles/includes/graalvm.sh"
 alias infinispan="source ~/.dotfiles/includes/infinispan.sh"
 alias jdg="source ~/.dotfiles/includes/jdg.sh"
 alias jgroups="source ~/.dotfiles/includes/jgroups.sh"
 alias quarkus8="source ~/.dotfiles/includes/quarkus8.sh"
-alias quarkus11-latest="source ~/.dotfiles/includes/quarkus11-latest.sh"
-alias quarkus11-released="source ~/.dotfiles/includes/quarkus11-released.sh"
+alias quarkus-quarkus-dev="source ~/.dotfiles/includes/quarkus-quarkus-dev.sh"
+alias quarkus-graal193-dev="source ~/.dotfiles/includes/quarkus-graal193-dev.sh"
 alias operator="source ~/.dotfiles/includes/operator.sh"
 alias operator-minikube="source ~/.dotfiles/includes/operator-minikube.sh"
 alias operator-kind="source ~/.dotfiles/includes/operator-kind.sh"
 alias operator-aws="source ~/.dotfiles/includes/operator-aws.sh"
 alias olm="source ~/.dotfiles/includes/olm.sh"
-alias graal11-dev="source ~/.dotfiles/includes/graal11-dev.sh"
 alias adopt-openjdk="source ~/.dotfiles/includes/adopt-openjdk.sh"
 alias jdk-dev="source ~/.dotfiles/includes/jdk-dev.sh"
+
+alias graal-graal-dev="source ~/.dotfiles/includes/graal-graal-dev.sh"
+alias graal-19.3-dev="source ~/.dotfiles/includes/graal-19.3-dev.sh"
 
 # Java aliases
 alias dump-threads="~/.dotfiles/java/dump-threads.sh"

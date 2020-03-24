@@ -1,4 +1,4 @@
-export GRAALVM_HOME="/opt/graal-11-latest"
+export GRAALVM_HOME="/opt/graal-graal"
 export GRAALVM_BIN="${GRAALVM_HOME}/bin"
 
 export JAVA_HOME="${GRAALVM_HOME}"
@@ -11,6 +11,6 @@ export PATH=$JAVA_BINDIR:$PATH
 export PATH=${GRAALVM_BIN}:$PATH
 
 echo "### graal11 ###"
-java -version
+java -Xinternalversion
 native-image --version
 echo "### graal11 ###"
