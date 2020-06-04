@@ -100,7 +100,7 @@ function fnd-class {
 #
 # Themes
 #
-source ~/0/shell/polyglot/polyglot.sh
+#source ~/0/shell/polyglot/polyglot.sh
 #source ~/0/shell/kube-ps1/kube-ps1.sh
 #source ~/0/shell/polyglot-kube-ps1/polyglot-kube-ps1.sh
 
