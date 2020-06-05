@@ -97,13 +97,6 @@ function fnd-class {
     find "*${1}*" -name '*.jar' -exec grep -Hls "${2}" {} \;
 }
 
-#
-# Themes
-#
-#source ~/0/shell/polyglot/polyglot.sh
-#source ~/0/shell/kube-ps1/kube-ps1.sh
-#source ~/0/shell/polyglot-kube-ps1/polyglot-kube-ps1.sh
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/g/.sdkman"
-[[ -s "/Users/g/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/g/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="${HOME}/.sdkman"
+[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "/${HOME}/.sdkman/bin/sdkman-init.sh"

@@ -126,6 +126,8 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 # return codes. This is not supported by all prompts.
 # zstyle ':prezto:module:prompt' show-return-val 'yes'
 
+zstyle :prezto:module:prompt theme powerlevel10k
+
 #
 # Python
 #
