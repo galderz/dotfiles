@@ -33,7 +33,7 @@ brew:
 		emacs-plus
 
 shell:
-	init/shell.sh
+	./shell.sh
 
 brew-cask:
 	brew cask install \
@@ -72,24 +72,13 @@ all: fast brew-cask
 
 ## Manual targets
 
-sdkman:
-	curl -s "https://get.sdkman.io" | bash
-	source "$$HOME/.sdkman/bin/sdkman-init.sh"
-
-virtualbox:
-	init/virtualbox.sh
-
 # TODO make it non-manual (requires restore)
 fonts:
-	init/fonts.sh
+	./fonts.sh
 
 # TODO make it non-manual (requires restore)
 ssh:
-	init/ssh.sh
-
-# TODO make it non-manual
-restore:
-	init/restore.sh
+	./ssh.sh
 
 # TODO make it non-manual
 restore-from-time-machine:
@@ -101,12 +90,17 @@ restore-from-time-machine:
 	cp -r .ssh.redhat ~/; \
 	cp .private.el ~/; \
 	cp .pypirc ~/; \
+  cp .authinfo.gpg ~/; \
 	cp -r .gnupg ~/ || true; \
   cp -r Documents ~/; \
   cp -r Dropbox ~/;
 
-restore-repos:
-	init/restore-repos.sh
+# Try to use rsync:
+# restore-repos:
+# 	pushd /Volumes/M19TM/Backups.backupdb/m19/Latest/Macintosh\ HD/Users/g; \
+# 	cp -r 1 ~/; \
+# 	cp -r 2 ~/; \
+# 	cp -r 3 ~/;
 
 
 ## Host targets
