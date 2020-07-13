@@ -3,11 +3,16 @@
 
 source ~/.dotfiles/maven/settings.sh
 source ~/.dotfiles/java/java11.sh
-source ~/.dotfiles/maven/aliases
-# source ~/bin/git-completion
-# source ~/bin/aliases
 
-# export MAVEN_OPTS="$MAVEN_OPTS -Dlog4j.configuration=file:/opt/infinispan-log4j.xml"
+alias mc='mvn -s maven-settings.xml clean'
+alias mb='mvn -s maven-settings.xml -DskipTests=true install'
+alias mbp='mvn -s maven-settings.xml -DskipTests=true install --projects'
+alias mcb='mvn -s maven-settings.xml -DskipTests=true clean install'
+alias mcbp='mvn -s maven-settings.xml -DskipTests=true clean install --projects'
+alias mt='mvn -s maven-settings.xml install'
+alias mtp='mvn -s maven-settings.xml install --projects'
+alias mct='mvn -s maven-settings.xml clean install'
+alias mctp='mvn -s maven-settings.xml clean install --projects'
 
 pushd ~/1/infinispan
 git status
