@@ -94,19 +94,3 @@ restore-from-time-machine:
 	cp -r .gnupg ~/ || true; \
   cp -r Documents ~/; \
   cp -r Dropbox ~/;
-
-# Try to use rsync:
-# restore-repos:
-# 	pushd /Volumes/M19TM/Backups.backupdb/m19/Latest/Macintosh\ HD/Users/g; \
-# 	cp -r 1 ~/; \
-# 	cp -r 2 ~/; \
-# 	cp -r 3 ~/;
-
-
-## Host targets
-
-backup:
-	init/backup.sh
-
-backup-repos:
-	init/backup-repos.sh
