@@ -54,7 +54,7 @@ alias operator-kind="source ~/.dotfiles/includes/operator-kind.sh"
 alias operator-aws="source ~/.dotfiles/includes/operator-aws.sh"
 alias olm="source ~/.dotfiles/includes/olm.sh"
 alias adopt-openjdk="source ~/.dotfiles/includes/adopt-openjdk.sh"
-alias jdk-dev="source ~/.dotfiles/includes/jdk-dev.sh"
+alias jdk-fastdebug-dev="source ~/.dotfiles/includes/jdk-fastdebug-dev.sh"
 
 alias graal-graal-dev="source ~/.dotfiles/includes/graal-graal-dev.sh"
 alias graal-19.3-dev="source ~/.dotfiles/includes/graal-19.3-dev.sh"
@@ -100,3 +100,6 @@ function fnd-class {
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="${HOME}/.sdkman"
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "/${HOME}/.sdkman/bin/sdkman-init.sh"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -16,21 +16,24 @@ emacs:
 symlinks:
 	ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
 	ln -s ~/.dotfiles/log.d ~/.log.d
+	ln -s ~/.dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
+	ln -s ~/.dotfiles/emacs/.spacemacs ~/.spacemacs
 
 install-brew:
-	echo | /usr/bin/ruby -e `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)`
+	./install-brew.sh
 	brew tap d12frosted/emacs-plus
 
 brew:
 	brew install \
+		autoconf \
+		emacs-plus \
 		git \
 		gpg \
 		haskell-stack \
-		unrar \
-		wget \
-		python-yq \
 		ninja \
-		emacs-plus
+		python-yq \
+		unrar \
+		wget
 
 shell:
 	./shell.sh
@@ -39,20 +42,19 @@ brew-cask:
 	brew cask install \
 		1password \
 		alfred \
-		autoconf \
-		brave-browser \
 		docker \
 		dropbox \
-		firefox \
-		google-chrome \
 		intellij-idea \
 		istat-menus \
 		iterm2 \
+		kindle \
+		slack \
 		skype \
 		spotify \
 		tunnelblick \
 		vlc \
-		xld
+		xld \
+		zulip
 
 macos:
 	pushd ~/.dotfiles/macos; \
@@ -82,15 +84,13 @@ ssh:
 
 # TODO make it non-manual
 restore-from-time-machine:
-	pushd /Volumes/M19TM/Backups.backupdb/m19/Latest/Macintosh\ HD/Users/g; \
-	cp -r 0 ~/; \
-	mkdir ~/.m2; \
-	cp .m2/settings ~/.m2; \
-	cp -r .ssh ~/; \
-	cp -r .ssh.redhat ~/; \
-	cp .private.el ~/; \
-	cp .pypirc ~/; \
-  cp .authinfo.gpg ~/; \
-	cp -r .gnupg ~/ || true; \
-  cp -r Documents ~/; \
-  cp -r Dropbox ~/;
+	pushd Volumes/M19TM/Backups.backupdb/m19/Latest/Macintosh\ HD\ -\ Data/Users/g; \
+	rsync -va 0 ~/; \
+	rsync -va .ssh ~/; \
+	rsync -va .ssh.redhat ~/; \
+	rsync -va .private.el ~/; \
+	rsync -va .pypirc ~/; \
+  rsync -va .authinfo.gpg ~/; \
+	rsync -va .gnupg ~/ || true; \
+  rsync -va Documents ~/; \
+  rsync -va Dropbox ~/;

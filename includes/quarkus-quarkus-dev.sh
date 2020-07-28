@@ -1,7 +1,7 @@
-export JAVA_HOME="/opt/includes/quarkus-graal"
+export JAVA_HOME="/opt/java-11-mandrel-home"
 source ~/.dotfiles/java/java.sh
 
-source ~/.dotfiles/maven/maven35.sh
+source ~/.dotfiles/maven/maven.sh
 source ~/.dotfiles/maven/settings.sh
 alias mcb='mvn clean install -DskipTests'
 alias mb='mvn install -Dno-format -DskipTests'
