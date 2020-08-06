@@ -56,8 +56,7 @@ alias olm="source ~/.dotfiles/includes/olm.sh"
 alias adopt-openjdk="source ~/.dotfiles/includes/adopt-openjdk.sh"
 alias jdk-fastdebug-dev="source ~/.dotfiles/includes/jdk-fastdebug-dev.sh"
 
-alias graal-graal-dev="source ~/.dotfiles/includes/graal-graal-dev.sh"
-alias graal-19.3-dev="source ~/.dotfiles/includes/graal-19.3-dev.sh"
+alias mandrel-mandrel-dev="source ~/.dotfiles/includes/mandrel-mandrel-dev.sh"
 
 # Java aliases
 alias dump-threads="~/.dotfiles/java/dump-threads.sh"

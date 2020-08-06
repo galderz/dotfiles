@@ -44,6 +44,7 @@ brew-cask:
 		alfred \
 		docker \
 		dropbox \
+		eclipse-java \
 		intellij-idea \
 		istat-menus \
 		iterm2 \
