@@ -17,7 +17,7 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 defaults write -g com.apple.keyboard.fnState -bool true
 
 # Set dock on right hand side
-defaults write com.apple.dock orientation right
+defaults write com.apple.dock orientation left
 
 # When using Command key as Meta key on Emacs GUI version, Command-Ctrl-d (C-M-d)
 # shortcut does not work unless the system wide OSX shortcut has been disabled

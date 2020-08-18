@@ -42,6 +42,7 @@ brew-cask:
 	brew cask install \
 		1password \
 		alfred \
+		clion \
 		docker \
 		dropbox \
 		eclipse-java \

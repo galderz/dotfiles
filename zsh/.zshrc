@@ -52,11 +52,17 @@ alias operator="source ~/.dotfiles/includes/operator.sh"
 alias operator-minikube="source ~/.dotfiles/includes/operator-minikube.sh"
 alias operator-kind="source ~/.dotfiles/includes/operator-kind.sh"
 alias operator-aws="source ~/.dotfiles/includes/operator-aws.sh"
-alias olm="source ~/.dotfiles/includes/olm.sh"
-alias adopt-openjdk="source ~/.dotfiles/includes/adopt-openjdk.sh"
-alias jdk-fastdebug-dev="source ~/.dotfiles/includes/jdk-fastdebug-dev.sh"
 
+
+# JDK aliases
+alias jdk-fastdebug-dev="source ~/.dotfiles/includes/jdk-fastdebug-dev.sh"
+alias jdk-slowdebug-dev="source ~/.dotfiles/includes/jdk-slowdebug-dev.sh"
+alias jdk-11-dev="source ~/.dotfiles/includes/jdk-11-dev.sh"
+
+
+# GraalVM / Mandrel aliases
 alias mandrel-mandrel-dev="source ~/.dotfiles/includes/mandrel-mandrel-dev.sh"
+
 
 # Java aliases
 alias dump-threads="~/.dotfiles/java/dump-threads.sh"
@@ -95,10 +101,6 @@ function fnd {
 function fnd-class {
     find "*${1}*" -name '*.jar' -exec grep -Hls "${2}" {} \;
 }
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="${HOME}/.sdkman"
-[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "/${HOME}/.sdkman/bin/sdkman-init.sh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
