@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+${HOME}/.qollider/jbang/bin/jbang $(dirname $0)/git-cleanup.java "$@"
