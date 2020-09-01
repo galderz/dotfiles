@@ -1,4 +1,4 @@
-export JAVA_HOME="/opt/java-11-mandrel-home"
+export JAVA_HOME="/opt/java-11-graalvm-home"
 source ~/.dotfiles/java/java.sh
 
 source ~/.dotfiles/maven/maven.sh
