@@ -52,6 +52,8 @@ alias operator-minikube="source ~/.dotfiles/includes/operator-minikube.sh"
 alias operator-kind="source ~/.dotfiles/includes/operator-kind.sh"
 alias operator-aws="source ~/.dotfiles/includes/operator-aws.sh"
 
+alias maven-11="export JAVA_HOME=\"/opt/java-11\" && source ~/.dotfiles/maven/maven.sh && source ~/.dotfiles/java/java.sh"
+alias maven-14="export JAVA_HOME=\"/opt/java-14\" && source ~/.dotfiles/maven/maven.sh && source ~/.dotfiles/java/java.sh"
 
 # JDK aliases
 alias jdk-fastdebug-dev="source ~/.dotfiles/includes/jdk-fastdebug-dev.sh"
@@ -72,6 +74,8 @@ alias j8jvmci="source ~/.dotfiles/java/java8-jvmci.sh"
 alias jboss-kill='pkill -9 -f ".*/java .* org.jboss.as.standalone .*" \
   || pkill -9 -f ".*/java .* org.jboss.as.process-controller .*"'
 alias ps-rss="ps ax -o pid,rss,command | numfmt --header --from-unit=1024 --to=iec --field 2 | grep -v grep"
+alias jmc="source ~/.dotfiles/includes/jmc.sh"
+
 
 # Cloud aliases
 alias oc41="source ~/.dotfiles/openshift/openshift-4.1.sh"
@@ -80,12 +84,15 @@ alias google-cloud="source ~/.dotfiles/google/google-cloud.sh"
 alias update-minikube="~/.dotfiles/kubernetes/update-minikube.sh"
 alias update-kind="~/.dotfiles/kubernetes/update-kind.sh"
 
+
 # External aliases
 alias nodejs="source ~/.dotfiles/node.js/nodejs.sh"
 alias golang="source ~/.dotfiles/go/golang.sh"
 
+
 # Presentation aliases
 alias putcachejpa="source ~/.dotfiles/includes/putcachejpa.sh"
+
 
 #
 # Functions

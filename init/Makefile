@@ -30,6 +30,7 @@ brew:
 		git \
 		gpg \
 		haskell-stack \
+		hexyl \
 		ninja \
 		python-yq \
 		unrar \
