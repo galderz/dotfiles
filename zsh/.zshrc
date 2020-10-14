@@ -59,8 +59,11 @@ alias operator-minikube="source ~/.dotfiles/includes/operator-minikube.sh"
 alias operator-kind="source ~/.dotfiles/includes/operator-kind.sh"
 alias operator-aws="source ~/.dotfiles/includes/operator-aws.sh"
 
-alias maven-11="export JAVA_HOME=\"/opt/java-11\" && source ~/.dotfiles/maven/maven.sh && source ~/.dotfiles/java/java.sh"
-alias maven-14="export JAVA_HOME=\"/opt/java-14\" && source ~/.dotfiles/maven/maven.sh && source ~/.dotfiles/java/java.sh"
+alias maven-java="source ~/.dotfiles/maven/maven.sh && source ~/.dotfiles/java/java.sh"
+alias maven-11="export JAVA_HOME=\"/opt/java-11\" && maven-java"
+alias maven-14="export JAVA_HOME=\"/opt/java-14\" && maven-java"
+
+alias jbangdev="source ~/.dotfiles/jbang/jbang.sh"
 
 # JDK aliases
 alias jdk-fastdebug-dev="source ~/.dotfiles/includes/jdk-fastdebug-dev.sh"
