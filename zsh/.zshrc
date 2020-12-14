@@ -63,7 +63,8 @@ alias maven-java="source ~/.dotfiles/maven/maven.sh && source ~/.dotfiles/java/j
 alias maven-11="export JAVA_HOME=\"/opt/java-11\" && maven-java"
 alias maven-14="export JAVA_HOME=\"/opt/java-14\" && maven-java"
 
-alias jbangdev="source ~/.dotfiles/jbang/jbang.sh"
+alias jbanging="source ~/.dotfiles/jbang/jbang.sh"
+alias jbanging-java="export JAVA_HOME=\"/opt/java-11\" && jbanging"
 
 # JDK aliases
 alias jdk-fastdebug-dev="source ~/.dotfiles/includes/jdk-fastdebug-dev.sh"
@@ -120,3 +121,7 @@ function fnd-class {
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Add Jbang to environment
+alias j!=jbang
+export PATH="/var/folders/5x/zm5033c95k3_wby22_t5zws40000gn/T/junit8753561674751766/bin:$PATH"

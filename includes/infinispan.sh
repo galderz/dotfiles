@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 
+source ~/.dotfiles/maven/maven.sh
 source ~/.dotfiles/maven/settings.sh
 source ~/.dotfiles/java/java11.sh
 
