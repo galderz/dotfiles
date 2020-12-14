@@ -63,7 +63,7 @@ alias maven-java="source ~/.dotfiles/maven/maven.sh && source ~/.dotfiles/java/j
 alias maven-11="export JAVA_HOME=\"/opt/java-11\" && maven-java"
 alias maven-14="export JAVA_HOME=\"/opt/java-14\" && maven-java"
 
-alias jbanging="source ~/.dotfiles/jbang/jbang.sh"
+alias jbanging="source ~/.dotfiles/jbang/jbanging.sh"
 alias jbanging-java="export JAVA_HOME=\"/opt/java-11\" && jbanging"
 
 # JDK aliases
