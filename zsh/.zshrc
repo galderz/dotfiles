@@ -66,6 +66,7 @@ alias maven-14="export JAVA_HOME=\"/opt/java-14\" && maven-java"
 alias jbanging="source ~/.dotfiles/jbang/jbanging.sh"
 alias jbanging-java="export JAVA_HOME=\"/opt/java-11\" && jbanging"
 
+
 # JDK aliases
 alias jdk-fastdebug-dev="source ~/.dotfiles/includes/jdk-fastdebug-dev.sh"
 alias jdk-slowdebug-dev="source ~/.dotfiles/includes/jdk-slowdebug-dev.sh"
@@ -74,6 +75,11 @@ alias jdk-11-dev="source ~/.dotfiles/includes/jdk-11-dev.sh"
 
 # GraalVM / Mandrel aliases
 alias mandrel-mandrel-dev="source ~/.dotfiles/includes/mandrel-mandrel-dev.sh"
+
+
+# QCC aliases
+alias qcc-dev="maven-11 && pushd ~/1/qcc-qcc && git status"
+alias qoccido-dev="maven-11 && jbanging && pushd ~/1/qoccido && git status"
 
 
 # Java aliases
@@ -121,7 +127,3 @@ function fnd-class {
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Add Jbang to environment
-alias j!=jbang
-export PATH="/var/folders/5x/zm5033c95k3_wby22_t5zws40000gn/T/junit8753561674751766/bin:$PATH"

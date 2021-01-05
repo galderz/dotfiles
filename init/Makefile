@@ -31,8 +31,10 @@ brew:
 		gpg \
 		haskell-stack \
 		hexyl \
+		make \
 		ninja \
 		python-yq \
+		sed \
 		unrar \
 		wget
 

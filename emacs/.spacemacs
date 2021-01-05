@@ -56,7 +56,11 @@ values."
           erc-server-list
           '(("irc-2.devel.redhat.com"
              :port "6667"
-             :nick "galderz")))
+             :nick "galderz")
+            ("irc.freenode.net"
+             :port "6667"
+             :nick "galderz")
+            ))
 
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -370,8 +374,8 @@ you should place your code here."
   ;; Password already provided
   (setq erc-prompt-for-nickserv-password nil)
   (setq erc-autojoin-channels-alist
-        '(("irc-2.devel.redhat.com" "#java")))
-
+        '(("freenode.net" "#nix-bitcoin")
+          ("irc-2.devel.redhat.com" "#java")))
   )
 
 
