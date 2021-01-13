@@ -28,11 +28,11 @@ import org.eclipse.jgit.api.Git;
 class gitCleanup implements Callable<Integer> {
 
     public static final String MASTER = "master";
-    public static final String REMOTE_MASTER = "refs/remotes/origin/master";
+    public static final String REMOTE_MASTER = "refs/remotes/upstream/master";
     @Parameters(index = "0", description = "Set the project directory (default is the current directory)", defaultValue = "")
     private File directory;
 
-    @CommandLine.Option(names = "--mine", description = "Set the remote name associated with your fork", defaultValue = "galderz")
+    @CommandLine.Option(names = "--mine", description = "Set the remote name associated with your fork", defaultValue = "origin")
     private String mine;
 
     @CommandLine.Option(names = "--dry-run", description = "Enable / Disable Dry Run", defaultValue = "true")
