@@ -75,6 +75,7 @@ alias jdk-11-dev="source ~/.dotfiles/includes/jdk-11-dev.sh"
 
 # GraalVM / Mandrel aliases
 alias mandrel-mandrel-dev="source ~/.dotfiles/includes/mandrel-mandrel-dev.sh"
+alias neo4j-load="~/.dotfiles/neo4j/neo4j-load.sh"
 
 
 # QCC aliases
