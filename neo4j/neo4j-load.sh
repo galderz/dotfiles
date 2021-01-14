@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-NEO_HOME ?= /opt/neo4j
+NEO_HOME = /opt/neo4j
 
 neoshell = "$(NEO_HOME)/bin/cypher-shell -u neo4j -p neo"
 
