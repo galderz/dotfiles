@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-NEO_HOME = /opt/neo4j
+set -e
 
-neoshell = "$(NEO_HOME)/bin/cypher-shell -u neo4j -p neo"
+NEO_HOME=/opt/neo4j
+
+neoshell="$(NEO_HOME)/bin/cypher-shell -u neo4j -p neo"
 
 rm -f ${NEO_HOME}/import/*
 $(neoshell) "MATCH(n) DETACH DELETE n" || true
