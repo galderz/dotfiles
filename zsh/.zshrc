@@ -95,6 +95,10 @@ alias ps-rss="ps ax -o pid,rss,command | numfmt --header --from-unit=1024 --to=i
 alias jmc="source ~/.dotfiles/includes/jmc.sh"
 
 
+# Rust aliases
+alias lang-rust="source $HOME/.cargo/env"
+alias lightning-rust="lang-rust && pushd ~/2/rust-lightning && git status"
+
 # Cloud aliases
 alias oc41="source ~/.dotfiles/openshift/openshift-4.1.sh"
 alias oc42="source ~/.dotfiles/openshift/openshift-4.2.sh"

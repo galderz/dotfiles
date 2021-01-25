@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 
+source ~/.dotfiles/java/java11.sh
 source ~/.dotfiles/maven/maven.sh
 source ~/.dotfiles/maven/settings.sh
-source ~/.dotfiles/java/java11.sh
 
 alias mc='mvn -s maven-settings.xml clean'
 alias mb='mvn -s maven-settings.xml -DskipTests=true install'

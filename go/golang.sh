@@ -1,18 +1,12 @@
 #!/usr/bin/env bash
 
+export GOLANG_HOME="/opt/go"
+export GOLANG_BIN=$GOLANG_HOME/bin
+export GOPATH="/opt/gopath"
 
-export GOHOME="/opt/go"
-#export DEPHOME="/opt/dep-0.5.0-33-g14bef7d1"
-export GOPATH=$HOME/1/go
+export PATH=$GOLANG_BIN:$PATH
 
-
-export GOHOME_BIN=$GOHOME/bin
-export GOPATH_BIN=$GOPATH/bin
-export PATH=$GOHOME_BIN:$GOPATH_BIN:$DEPHOME:$PATH
-
+export GO111MODULE=auto
 
 echo `go env GOPATH`
 echo `go version`
-echo `dep version`
-
-pushd $GOPATH
