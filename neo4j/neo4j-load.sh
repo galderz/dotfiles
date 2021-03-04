@@ -6,7 +6,7 @@ NEO_HOME=/opt/neo4j
 
 neoshell="${NEO_HOME}/bin/cypher-shell -u neo4j -p neo"
 
-rm -f ${NEO_HOME}/import/*
+rm -drf ${NEO_HOME}/import/*
 ${neoshell} "MATCH(n) DETACH DELETE n" || true
 ${neoshell} "DROP CONSTRAINT unique_vm_id" || true
 ${neoshell} "DROP CONSTRAINT unique_method_id" || true
