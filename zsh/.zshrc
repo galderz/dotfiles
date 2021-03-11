@@ -60,9 +60,12 @@ alias operator-kind="source ~/.dotfiles/includes/operator-kind.sh"
 alias operator-aws="source ~/.dotfiles/includes/operator-aws.sh"
 
 alias maven-java="source ~/.dotfiles/maven/maven.sh && source ~/.dotfiles/java/java.sh"
-alias maven-11="export JAVA_HOME=\"/opt/java-11\" && maven-java"
-alias maven-14="export JAVA_HOME=\"/opt/java-14\" && maven-java"
-alias maven-15="export JAVA_HOME=\"/opt/java-15\" && maven-java"
+alias maven-11="export JAVA_HOME=/opt/java-11 && maven-java"
+alias maven-14="export JAVA_HOME=/opt/java-14 && maven-java"
+alias maven-15="export JAVA_HOME=/opt/java-15 && maven-java"
+
+alias adopt-11='export JAVA_HOME=/opt/adoptjdk-11 && maven-java'
+alias eclipse-mat='adopt-11 && pushd ${HOME}/Applications/mat.app/Contents/MacOS'
 
 alias jbanging="source ~/.dotfiles/jbang/jbanging.sh"
 alias jbanging-java="export JAVA_HOME=\"/opt/java-11\" && jbanging"
@@ -87,14 +90,9 @@ alias qoccido-dev="maven-11 && jbanging && pushd ~/1/qoccido && git status"
 # Java aliases
 alias dump-threads="~/.dotfiles/java/dump-threads.sh"
 alias untilfail="~/.dotfiles/java/untilfail.sh"
-alias j11="source ~/.dotfiles/java/java11.sh"
-alias j8="source ~/.dotfiles/java/java8.sh"
-alias j8jvmci="source ~/.dotfiles/java/java8-jvmci.sh"
-alias jboss-kill='pkill -9 -f ".*/java .* org.jboss.as.standalone .*" \
-  || pkill -9 -f ".*/java .* org.jboss.as.process-controller .*"'
 alias ps-rss="ps ax -o pid,rss,command | numfmt --header --from-unit=1024 --to=iec --field 2 | grep -v grep"
 alias jmc="source ~/.dotfiles/includes/jmc.sh"
-
+alias eclipse-mat=""
 
 # Rust aliases
 alias lang-rust="source $HOME/.cargo/env"
