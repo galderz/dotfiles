@@ -16,7 +16,7 @@ alias gprh='~/.dotfiles/git/git-pull-request-handle'
 
 # Push (p)
 alias gpo='git push origin'
-alias gpom='git push origin master'
+alias gpom='git push origin main'
 
 # Topic Branch (t)
 alias gtX='~/.dotfiles/git/git-topic-branch-remove'
