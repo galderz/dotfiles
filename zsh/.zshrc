@@ -43,6 +43,7 @@ alias er='emacsclient -e "(kill-emacs)" && emacs --daemon && emacsclient -c &'
 
 # Git aliases
 source ~/.dotfiles/git/aliases
+alias git-cleanup='jbanging && jbang ~/.dotfiles/git/git-cleanup.java'
 
 # Maven aliases
 source ~/.dotfiles/maven/aliases

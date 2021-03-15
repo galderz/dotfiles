@@ -27,8 +27,8 @@ import org.eclipse.jgit.api.Git;
         description = "git-cleanup made with jbang")
 class gitCleanup implements Callable<Integer> {
 
-    public static final String MASTER = "master";
-    public static final String REMOTE_MASTER = "refs/remotes/upstream/master";
+    public static final String MASTER = "main";
+    public static final String REMOTE_MASTER = "refs/remotes/upstream/main";
     @Parameters(index = "0", description = "Set the project directory (default is the current directory)", defaultValue = "")
     private File directory;
 
